@@ -21,7 +21,7 @@ function generateQuiz() {
     };
 
     const encodedData = encodeURIComponent(JSON.stringify(quizData));
-    const link = `${location.origin}/quiz.html?data=${encodedData}`;
+    const link = `http://127.0.0.1:5500/quiz.html?data=${encodedData}`;
 
     document.getElementById('quizLink').value = link;
     document.getElementById('shareArea').style.display = 'block';
