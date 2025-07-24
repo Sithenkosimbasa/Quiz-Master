@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quize Master - Create Quiz</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Quize Master - Create Your Quiz</h1>
+
+    <label for="timer">Set Timer (seconds):</label>
+    <input type="number" id="timer" min="10" value="60"/>
+
+    <div id="questionBuilder"></div>
+    <button onclick="addQuestion()">➕ Add Question</button>
+    <br><br>
+
+    <button onclick="generateQuiz()">🚀 Generate Quiz Link</button>
+
+    <div id="shareArea" style="display:none;">
+      <h3>✅ Quiz Ready!</h3>
+      <p>Send this link:</p>
+      <input type="text" id="quizLink" readonly style="width:100%; padding:8px;"/>
+      <canvas id="qrCanvas"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="create.js"></script>
+</body>
+</html>
