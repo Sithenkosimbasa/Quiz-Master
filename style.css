@@ -1,12 +1,16 @@
+/* ======= Container ======= */
 .container {
   max-width: 700px;
   margin: 30px auto;
   padding: 20px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #0A1A5C;
 }
 
+/* ======= Inputs and Selects ======= */
 input, select {
   display: block;
   margin: 10px 0;
@@ -14,21 +18,109 @@ input, select {
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
+/* ======= Buttons ======= */
 button {
   padding: 10px 15px;
-  background-color: #0A1A5C;
+  background-color: #0A1A5C; /* DSI Blue */
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   margin-top: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
+button:hover:not(:disabled) {
+  background-color: #071241; /* Darker blue on hover */
+}
+
+button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+/* ======= Question Block ======= */
 .question-block {
   margin-bottom: 20px;
   padding: 15px;
   background: #f9f9f9;
   border-left: 4px solid #0A1A5C;
+  border-radius: 6px;
+}
+
+/* ======= Labels ======= */
+label {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+}
+
+/* ======= Timer Display ======= */
+#timerBox {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0A1A5C;
+}
+
+/* ======= Result Display ======= */
+#result {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0A1A5C;
+  text-align: center;
+}
+
+/* ======= Multiple Choice Options ======= */
+.mc-option {
+  margin-bottom: 8px;
+}
+
+.mc-option input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* ======= Slider Styles ======= */
+input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+  -webkit-appearance: none;
+  background: #ddd;
+  height: 8px;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="range"]:hover {
+  background: #0A1A5C;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #0A1A5C;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background: #071241;
+}
+
+.slider-value {
+  font-weight: 600;
+  color: #0A1A5C;
+  margin-left: 8px;
+  user-select: none;
 }
